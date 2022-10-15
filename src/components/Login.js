@@ -4,7 +4,7 @@ import { AuthContext } from '../context/UserContext';
 
 const Login = () => {
 
-    const { signIn } = useContext(AuthContext)
+    const { signIn, signInWithGoogle } = useContext(AuthContext)
 
     const handleSubmit = event => {
         event.preventDefault()
@@ -23,6 +23,16 @@ const Login = () => {
                 console.error(error)
             })
     }
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then((result) => {
+                const user = result.user;
+                console.log(user);
+            }).catch((error) => {
+                console.error(error)
+            });
+    }
+
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">
@@ -50,6 +60,7 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
                             </div>
+                            <img onClick={handleGoogleSignIn} className='w-16 h-16 ml-32 p-2' src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt="" />
                         </Form>
                     </div>
                 </div>
