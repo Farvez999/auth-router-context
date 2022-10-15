@@ -17,6 +17,7 @@ const Header = () => {
             <div className="navbar bg-primary text-primary-content">
                 <Link to='/' className="btn btn-ghost normal-case text-xl">TecData Soft</Link>
                 <Link to='/home' className="btn btn-ghost normal-case text-xl">Home</Link>
+                <Link to='/orders' className="btn btn-ghost normal-case text-xl">Orders</Link>
                 <Link to='/login' className="btn btn-ghost normal-case text-xl">Login</Link>
                 <Link to='/register' className="btn btn-ghost normal-case text-xl">Register</Link>
                 {
