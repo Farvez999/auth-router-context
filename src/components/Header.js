@@ -13,7 +13,7 @@ const Header = () => {
                 <Link to='/login' className="btn btn-ghost normal-case text-xl">Login</Link>
                 <Link to='/register' className="btn btn-ghost normal-case text-xl">Register</Link>
                 {
-                    user?.displayName && <span>Welcome {user.displayName}</span>
+                    user?.email && <span>Welcome {user.email}</span>
                 }
             </div>
         </div>
